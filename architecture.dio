@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram id="WNaJajAUcEBi9CqqXX9R" name="Page-1">
+        <mxGraphModel dx="1126" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Home App (1.0.0)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="50" width="260" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Header" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Footer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="PDP App (1.0.0)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="40" width="260" height="260" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="TfFrxeU9C2S9yCQtGpaL" name="Page-2">
+        <mxGraphModel dx="1410" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-16" style="edgeStyle=none;html=1;" edge="1" parent="1" source="N-_V6-sBR55sDoAS8bSB-1" target="N-_V6-sBR55sDoAS8bSB-5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="340" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-1" value="Home App (1.0.0)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry y="50" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-17" style="edgeStyle=none;html=1;" edge="1" parent="1" source="N-_V6-sBR55sDoAS8bSB-4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="450" y="155"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-4" value="PDP App (1.0.0)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="40" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-5" value="PDP App (1.0.0)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="250" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-6" value="Header" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="N-_V6-sBR55sDoAS8bSB-7" value="Footer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="315" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,8 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Link } from "react-router-dom";
 
-import MiniCart from "cart/MiniCart";
-import Login from "cart/Login";
+const MiniCart = React.lazy(() =>
+  import("cart/MiniCart").catch(() => ({
+    default: () => <div>MiniCart is currently unavailable.</div>,
+  }))
+);
+
+const Login = React.lazy(() =>
+  import("cart/Login").catch(() => ({
+    default: () => <div>Login is currently unavailable.</div>,
+  }))
+);
 
 export default function Header() {
   return (
@@ -16,8 +25,13 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex-end relative">
-          <MiniCart />
-          <Login />
+          <Suspense fallback={<div>Loading MiniCart...</div>}>
+            <MiniCart />
+          </Suspense>
+
+          <Suspense fallback={<div>Loading Login...</div>}>
+            <Login />
+          </Suspense>
         </div>
       </div>
     </div>

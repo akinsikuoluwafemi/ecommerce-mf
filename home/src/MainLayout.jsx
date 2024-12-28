@@ -8,7 +8,6 @@ import "remixicon/fonts/remixicon.css";
 import "./index.scss";
 
 import Footer from "home/Footer";
-// const Header = React.lazy(() => import("home/Header"));
 import Header from "home/Header";
 import PDPContent from "pdp/PDPContent";
 import HomeContent from "home/HomeContent";

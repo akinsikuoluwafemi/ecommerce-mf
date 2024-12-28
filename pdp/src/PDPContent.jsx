@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 import { getProductById, currency } from "home/products";
-import placeAddToCart from "addtocart/placeAddToCart";
+import  AddToCart  from "./AddToCart";
 
 const PDPContent = () => {
+  
   const {id }= useParams();
   const [product, setProduct] = React.useState(null);
 
@@ -16,14 +17,9 @@ const PDPContent = () => {
     }
   }, [id]);
 
-  useEffect(() => { 
-    if (addToCart.current) {
-      placeAddToCart(addToCart.current, product.id);
-    }
-  }, [product]);
 
-  const addToCart = useRef(null);
   if (!product) return null;
+
 
   return (
     <div className="grid grid-cols-2 gap-5">
@@ -37,7 +33,8 @@ const PDPContent = () => {
             {currency.format(product.price)}
           </div>
         </div>
-        <div ref={addToCart}></div>
+       
+        <AddToCart id={product.id} />
         <div className="mt-10">{product.description}</div>
         <div className="mt-10">{product.longDescription}</div>
       </div>

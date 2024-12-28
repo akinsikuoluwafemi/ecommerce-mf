@@ -35,11 +35,14 @@ cd ../server && npm install
 
 
 ## Starting apps
+from the root
 ```
-npm run start:all
+ run npm run start:all
 ```
 
+
 ### To start specific apps only
+from the root
 ```
 npm run start home cart pdp
 ```

@@ -1,0 +1,15 @@
+{
+  "name": "micro-fe-intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm run start\" \"cd home && npm run start\" \"cd cart && npm run start\" \"cd pdp && npm run start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.1"
+  }
+}

@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
-const MiniCart = React.lazy(() => import("cart/MiniCart"));
-const Login = React.lazy(() => import("cart/Login"));
-// import Login from "cart/Login";
-import {Link}  from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+import MiniCart from "cart/MiniCart";
+import Login from "cart/Login";
+
+export default function Header() {
   return (
     <div className="p-5 bg-blue-500 text-white text-3xl font-bold">
       <div className="flex">
@@ -16,16 +16,10 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex-end relative">
-          <Suspense fallback={<div>Loading...</div>}>
-            <MiniCart />
-          </Suspense>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Login />
-          </Suspense>
+          <MiniCart />
+          <Login />
         </div>
       </div>
     </div>
   );
-};
-
-export default Header;
+}

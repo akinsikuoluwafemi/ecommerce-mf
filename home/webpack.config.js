@@ -74,6 +74,8 @@ module.exports = (_, argv) => ({
         "./Header": "./src/Header.jsx",
         "./Footer": "./src/Footer.jsx",
         "./products": "./src/products.js",
+        "./HomeContent": "./src/HomeContent.jsx",
+        "./MainLayout": "./src/MainLayout.jsx",
       },
       shared: {
         ...deps,
@@ -84,6 +86,10 @@ module.exports = (_, argv) => ({
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: "auto",
         },
       },
     }),

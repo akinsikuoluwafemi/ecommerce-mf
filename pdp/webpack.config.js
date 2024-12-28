@@ -71,7 +71,8 @@ module.exports = (_, argv) => ({
         addtocart: "addtocart@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
-        "./PDPContent": "./src/PDPContent.jsx"
+        "./index.scss": "./src/index.scss",
+        "./PDPContent": "./src/PDPContent.jsx",
       },
       shared: {
         ...deps,
@@ -82,6 +83,10 @@ module.exports = (_, argv) => ({
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: "auto",
         },
       },
     }),

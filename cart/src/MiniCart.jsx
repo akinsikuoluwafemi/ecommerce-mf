@@ -1,28 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import { cart, clearCart } from './cart';
-import { currency } from 'home/products';
-
-
+import { cart, clearCart } from "./cart";
+import { currency } from "home/products";
 
 const MiniCart = () => {
-  const [items, setItems] = React.useState([]); //change to undefined later
+  const [items, setItems] = React.useState([]);
   const [showCart, setShowCart] = React.useState(false);
   const divRef = useRef(null);
 
   useEffect(() => {
     setItems(cart.value?.cartItems);
-    const unsubscribe = cart.subscribe((c) => {
+    const subscription = cart.subscribe((c) => {
       setItems(c?.cartItems);
-    })
+    });
+
     return () => {
-      unsubscribe();
-    }
-  }, [])
+      subscription.unsubscribe();
+    };
+  }, []);
 
-  if(!items) return null;
-
-  console.log(items);
-
+  if (!items) return null;
 
   return (
     <>
@@ -63,7 +59,7 @@ const MiniCart = () => {
             <div></div>
             <div>
               {currency.format(
-                items.reduce((a, v) => a + v.quantity * v.price, 0)
+                items.reduce((a, v) => a + v.quantity * v.price, 0),
               )}
             </div>
           </div>

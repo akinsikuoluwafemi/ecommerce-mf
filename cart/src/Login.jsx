@@ -2,7 +2,7 @@ import React from "react";
 
 import { login, useLoggedIn } from "./cart";
 
-const Login = ({left = -250}) => {
+const Login = ({ left = -250 }) => {
   const loggedIn = useLoggedIn();
   const [showLogin, setShowLogin] = React.useState(false);
   const [username, setUsername] = React.useState("sally");
@@ -21,7 +21,7 @@ const Login = ({left = -250}) => {
           style={{
             width: 300,
             top: "2rem",
-            left
+            left,
           }}
         >
           <input

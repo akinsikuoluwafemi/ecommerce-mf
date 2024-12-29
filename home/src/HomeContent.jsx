@@ -15,16 +15,18 @@ export default function HomeContent() {
   return (
     <div className="grid grid-cols-4 gap-5">
       {products?.map((product) => (
-        <div key={product.id}>
+        <div key={product.id} className="border p-4 rounded">
           <Link to={`/product/${product?.id}`}>
-            <img src={product?.image} alt={product?.name} />
-            </Link>
+            <img
+              src={product?.image}
+              alt={product?.name}
+            />
+          </Link>
           <div className="flex">
             <div className="flex-grow font-bold">
               <Link to={`/product/${product?.id}`}>
-                <a>{product?.name}</a>
+                {product?.name}
               </Link>
-                
             </div>
             <div className="flex-end">{currency.format(product?.price)}</div>
           </div>

@@ -8,10 +8,12 @@ const deps = require("./package.json").dependencies;
 const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
-  output: {
-    publicPath: "http://localhost:3001/",
-  },
-
+  entry: "./src/index.js",
+    output: {
+      publicPath: "http://localhost:3001/",
+      path: path.resolve(__dirname, "dist"),
+      filename: "bundle.js",
+    },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },

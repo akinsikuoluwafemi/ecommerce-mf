@@ -8,8 +8,11 @@ const deps = require("./package.json").dependencies;
 const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
+  entry: "./src/index.js",
   output: {
     publicPath: "http://localhost:3000/",
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
 
   resolve: {
@@ -76,6 +79,7 @@ module.exports = (_, argv) => ({
         "./products": "./src/products.js",
         "./HomeContent": "./src/HomeContent.jsx",
         "./MainLayout": "./src/MainLayout.jsx",
+        "./AppShell": "./src/AppShell.jsx",
       },
       shared: {
         ...deps,

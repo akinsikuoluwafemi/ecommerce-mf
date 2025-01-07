@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import "./index.scss";
 import "remixicon/fonts/remixicon.css";
+import HomeI18nWrapper from "./i18n/i18nContext";
 
 const AppShell = React.lazy(() => import("home/AppShell"));
 
@@ -13,9 +14,11 @@ const App = () => {
   const root = ReactDOM.createRoot(rootElement);
 
   root.render(
-    <React.Suspense fallback="Loading...">
-      <AppShell />
-    </React.Suspense>
+    <HomeI18nWrapper>
+      <React.Suspense fallback="Loading...">
+        <AppShell />
+      </React.Suspense>
+    </HomeI18nWrapper>
   );
 };
 

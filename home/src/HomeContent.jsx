@@ -31,6 +31,7 @@ export default function HomeContent() {
             <div className="flex-end">{currency.format(product?.price)}</div>
           </div>
           <div className="text-sm mt-4">{product?.description}</div>
+          
           {loggedIn && (
             <div className="text-right mt-2">
               <button

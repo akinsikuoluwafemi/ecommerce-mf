@@ -9,11 +9,11 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   entry: "./src/index.js",
-    output: {
-      publicPath: "http://localhost:3001/",
-      path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
-    },
+  output: {
+    publicPath: "http://localhost:3001/",
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
@@ -47,6 +47,11 @@ module.exports = (_, argv) => ({
         resolve: {
           fullySpecified: false,
         },
+      },
+      {
+        test: /\.json$/,
+        type: "json", // Tells Webpack to treat .json files as JSON
+        exclude: /node_modules/,
       },
       {
         test: /\.(css|s[ac]ss)$/i,

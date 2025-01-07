@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const AppShell = () => {
   return (
     <Router>
-      <MainLayout />
+        <MainLayout />
     </Router>
   );
 };

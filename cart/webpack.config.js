@@ -10,10 +10,10 @@ const printCompilationMessage = require('./compilation.config.js');
 module.exports = (_, argv) => ({
   entry: "./src/index",
   output: {
-      publicPath: "http://localhost:3002/",
-      path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
-    },
+    publicPath: "http://localhost:3002/",
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
@@ -49,6 +49,11 @@ module.exports = (_, argv) => ({
         },
       },
       {
+        test: /\.json$/,
+        type: "json", // Tells Webpack to treat .json files as JSON
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(css|s[ac]ss)$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
@@ -77,6 +82,7 @@ module.exports = (_, argv) => ({
         "./Login": "./src/Login.jsx",
         "./MiniCart": "./src/MiniCart.jsx",
         "./CartContent": "./src/CartContent.jsx",
+        "./hooks/useSwitchCartLanguage": "./src/hooks/useSwitchLanguage.js",
       },
       shared: {
         ...deps,

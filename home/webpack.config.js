@@ -50,6 +50,11 @@ module.exports = (_, argv) => ({
         },
       },
       {
+        test: /\.json$/,
+        type: "json", // Tells Webpack to treat .json files as JSON
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(css|s[ac]ss)$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
